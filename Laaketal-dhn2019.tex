@@ -55,11 +55,11 @@ The advantages and possibilities of corpus search system KORP that we have chose
 %
 \section{Introduction}
 
-The application of Language Technology (LT) and Text and Data Mining (TDM) methods and tools is gradually increasing and becoming more relevant in Estonia. Similarly to the Nordic and Baltic countries, Estonia can expect an explosive growth of digital heritage and text resources: preparations for massive digitisation of cultural heritage started in 2019 as national programme. The creation of these new digital resources will be the priority for all Estonian leading memory institutions and the scope of this huge project includes all different types of cultural heritage (printed books, archival documents, photo and film heritage, ethnographic and fine art objects) [5, 9] Digitized resources will be made accessible on the Internet as open data, but it is still an open question how and for what purpose can such digital resources be used [4]. 
+The application of Language Technology (LT) and Text and Data Mining (TDM) methods and tools is gradually increasing and becoming more relevant in Estonia. Similarly to the Nordic and Baltic countries, Estonia can expect an explosive growth of digital heritage and text resources: preparations for massive digitisation of cultural heritage started in 2019 as national programme. The creation of these new digital resources will be the priority for all Estonian leading memory institutions and the scope of this huge project includes all different types of cultural heritage (printed books, archival documents, photo and film heritage, ethnographic and fine art objects) [5, 9] Digitized resources will be made accessible on the Internet as open data, but it is still an open question how and for what purpose can such digital resources be used \cite{laakviires}. 
 
-What are the new challenges and the new knowledge offered by using the applications of Linguistic Analysis tools in analysing the digital literary heritage? Our interdisciplinary project “Literary Studies Meet Corpus Linguistics” concentrates on using cultural heritage, especially literary history sources in research with the help of the LT\&TDM methods. The primary question is how to bridge the gap between the research possibilities offered by the contemporary LT\&TDM and the ever increasing resources of texts and other digital data, produced by memory institutions. This has proved to be a complicated task and international practice has shown that literary scholars are slower to embrace new practices than linguists for whom corpus-based research is already a professional standard. In general, literary scholars are used to working with texts with traditional methods, analysing them as undivided poetical and semantic entities [9]. Digitizing of texts often preserves them as undivided and unannotated entities with occasionally added metadata - as a result, the digitized materials are human-readable rather than machine-readable.
+What are the new challenges and the new knowledge offered by using the applications of Linguistic Analysis tools in analysing the digital literary heritage? Our interdisciplinary project “Literary Studies Meet Corpus Linguistics” concentrates on using cultural heritage, especially literary history sources in research with the help of the LT\&TDM methods. The primary question is how to bridge the gap between the research possibilities offered by the contemporary LT\&TDM and the ever increasing resources of texts and other digital data, produced by memory institutions. This has proved to be a complicated task and international practice has shown that literary scholars are slower to embrace new practices than linguists for whom corpus-based research is already a professional standard. In general, literary scholars are used to working with texts with traditional methods, analysing them as undivided poetical and semantic entities \cite{viireslaak18}. Digitizing of texts often preserves them as undivided and unannotated entities with occasionally added metadata - as a result, the digitized materials are human-readable rather than machine-readable.
 
-LT\&TDM methods require treating literary works or texts as data, which can be analysed and processed with computer programmes. To research for statistics and trends in the data, a literary scholar needs either to do a close reading of literary texts as huge data amounts, or to develop new professional skills in data analysis methods. This imposes rethinking the approach to empirical object in literary studies in general and posing new and different research questions. The possibility to compare text strategies, rhetorical and stylistic patterns in literary, religious and political text corpora might give us new insights into intertwining ideology, rhetoric and identity presentations. One of the important trends of automated textual analysis in DH is Sentiment Analysis which, for instance, allows to measure emotion in parliamentary debates [6].
+LT\&TDM methods require treating literary works or texts as data, which can be analysed and processed with computer programmes. To research for statistics and trends in the data, a literary scholar needs either to do a close reading of literary texts as huge data amounts, or to develop new professional skills in data analysis methods. This imposes rethinking the approach to empirical object in literary studies in general and posing new and different research questions. The possibility to compare text strategies, rhetorical and stylistic patterns in literary, religious and political text corpora might give us new insights into intertwining ideology, rhetoric and identity presentations. One of the important trends of automated textual analysis in DH is Sentiment Analysis which, for instance, allows to measure emotion in parliamentary debates \cite{<Rheault2016}.
 
 
 \section{Private letters as a literary source}
@@ -70,7 +70,7 @@ During the years covered by the correspondence, in 1911-1939, Barbarus published
 
 The temporal and contextual frames of this correspondence is the period in Europe between two World Wars and, according to French philosopher Pierre Bourdieu, the creation of  the Estonian ‘cultural field’ in the Estonian Republic in years 1918-1940. As such, the correspondence offers semantically rich and multidimensional content for literary scholars.  
 
-Generally, we are inspired by the question how this kind of sources (private letters, correspondences, manuscripts, etc.) in different kinds of computer-readable formats (pdf, docx, txt etc.) can be used for creating new knowledge in the interdisciplinary field of literary studies, including biographics and life writing studies [7]. 
+Generally, we are inspired by the question how this kind of sources (private letters, correspondences, manuscripts, etc.) in different kinds of computer-readable formats (pdf, docx, txt etc.) can be used for creating new knowledge in the interdisciplinary field of literary studies, including biographics and life writing studies \cite{2015}. 
 
 The private correspondence of two Estonian writers during 28 years as an empirical material is extremely rich in the themes and possibilities to pose the traditional as well as the new research questions, e.g the factors of subjectivity and emotionality, verbal and poetic creativeness of the both authors.  
 
@@ -115,7 +115,7 @@ In this corpus, there are a lot of nonstandard abbreviations that were comprehen
 
 \subsection{Date and other temporal expressions}
 
-The date format of the manuscript letters varies greatly: “11. jaanuar 1927”, “19/XII.37”, “2. 2. 1934”, “Jõulu 3. pühal 1934” (on the 3rd holiday of Christmas 1934). The date in the format chosen by the letter authors needs to be saved as a part of the text, but in addition to that, all the date formats need to be normalized so that they could be present in the letter metadata in a standardized format (i.e., yyyy-mm-dd) whenever possible. When it is not possible, we can use the category “undefined” for the analysis transparency. Temporal expressions in the text of letters can be automatically recognized with the help of EstNLTK library for Python (https://github.com/estnltk/estnltk) and a software tool developed by Siim Orasmaa [5]. 
+The date format of the manuscript letters varies greatly: “11. jaanuar 1927”, “19/XII.37”, “2. 2. 1934”, “Jõulu 3. pühal 1934” (on the 3rd holiday of Christmas 1934). The date in the format chosen by the letter authors needs to be saved as a part of the text, but in addition to that, all the date formats need to be normalized so that they could be present in the letter metadata in a standardized format (i.e., YYYY-MM-DD) whenever possible. When it is not possible, we can use the category “undefined” for the analysis transparency. Temporal expressions in the text of letters can be automatically recognized with the help of EstNLTK library for Python (https://github.com/estnltk/estnltk) and a software tool developed by Siim Orasmaa \cite{ORASMAA14.530}. 
 
 \subsection{Named Entity Recognition}
 
@@ -278,25 +278,4 @@ and a homepage~\cite{ref_url1}. Multiple citations are grouped
 \bibliographystyle{splncs04}
 \bibliography{laaketal}
 %
-\begin{thebibliography}{8}
-\bibitem{ref_article1}
-Author, F.: Article title. Journal \textbf{2}(5), 99--110 (2016)
-
-\bibitem{ref_lncs1}
-Author, F., Author, S.: Title of a proceedings paper. In: Editor,
-F., Editor, S. (eds.) CONFERENCE 2016, LNCS, vol. 9999, pp. 1--13.
-Springer, Heidelberg (2016). \doi{10.10007/1234567890}
-
-\bibitem{ref_book1}
-Author, F., Author, S., Author, T.: Book title. 2nd edn. Publisher,
-Location (1999)
-
-\bibitem{ref_proc1}
-Author, A.-B.: Contribution title. In: 9th International Proceedings
-on Proceedings, pp. 1--2. Publisher, Location (2010)
-
-\bibitem{ref_url1}
-LNCS Homepage, \url{http://www.springer.com/lncs}. Last accessed 4
-Oct 2017
-\end{thebibliography}
 \end{document}
