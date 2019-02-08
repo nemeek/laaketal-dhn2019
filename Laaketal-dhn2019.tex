@@ -5,6 +5,7 @@
 \documentclass[runningheads]{llncs}
 %
 \usepackage{graphicx}
+\usepackage[dvipsnames]{xcolor}
 % Used for displaying a sample figure. If possible, figure files should
 % be included in EPS format.
 %
@@ -125,6 +126,20 @@ Named Entity Recognition (NER) annotations can be produced with the Estnltk tool
 \subsection{Detect other languages}
 
 Semper \& Barbarus were both promoters of French literature and culture in Estonia. They both worked as translators and travelled a lot. They scattered their letters with words, phrases, sentences and longer citations in many other languages than Estonian that were familiar to them (Latin, French, Russian, German). This is a challenge for the automatic language recognition and annotation tools which are currently oriented only to the analysis of standard Estonian. These tools does not help much in case of excerpts from other languages, but if such code-switching pieces were precisely recognized, lemmatized and analyzed, that information would be useful both to linguists and literary scholars.
+
+
+\begin{figure}
+
+  ``\colorbox{Green}{Bifur}''i kiri saabus \colorbox{Magenta}{Sinu kirjaga \"uhel p\"aeval}. Palutakse \colorbox{Magenta}{kohe} luule \"ule artikkel \"ara saata ja kedagi paluda, kes teisi k\"usimusi
+  (\colorbox{Orange}{sur la vie en g\'en\'eral})
+  käsitaks. Neil olla t\~olkija, nii siis v\~oivat eesti keeleski kirjutada. Et mul artikkel juba valmis oli, siis saatsin ta \colorbox{Magenta}{t\"ana} minema. Kui Sul lusti midagi saata, siis l\"akita \colorbox{Magenta}{kohe} , --- ehk novelli t\~olge (maksavad 50 \colorbox{CornflowerBlue}{fr.} leheküljest), ehk siis mahutavad neljandamasse \colorbox{CornflowerBlue}{nr}-isse; ehk viskad proosa \& teaatri \"ulegi artikli. Aadress : ``\colorbox{Green}{Bifur}'' , \colorbox{Green}{\'Editions du Carrefour} , \colorbox{Cyan}{199 , boul . St.-Germain , Paris} (VIe) (\colorbox{Orange}{M–eur le r\'edacteur en chef}  \colorbox{Green}{Ribemont Dessaignes}). K\"usisin kirjas, kas nende t\~olkija luuletisi t\~olkida v\~oiks, siis v\~oiksime valiku teha, ehk Suitsi ilmuva antoloogia neile saata. ``\colorbox{Green}{Bifur}'' harrastab k\"ull rohkem proosat \& informatsioonilaadilisi \"ulevaateid, nii siis vaevalt nad luule liimile l\"ahevad, aga eks ole ju veel teisi \v{z}urnaale p\"a\"ale ``\colorbox{Green}{Bifur}''i, kus avaldada saaks, kui aga t\~olkija leiduks. Mis teeb see \colorbox{CornflowerBlue}{E.K.L.} propagandakomitee? Kas peab viimaks nende liikmete seas propagandeerima hakkama? \colorbox{Green}{Visnapuu} kirjutab \colorbox{Green}{``\colorbox{CornflowerBlue}{V.-M}aas''} \colorbox{Green}{Igori} p\"otserduse puhul, et vaja propagandeerida, aga, kui ma ei eksi, oli ta ise selles komitees?
+
+  
+\caption{A figure caption is always placed below the illustration.
+Please note that short captions are centered, while long ones are
+justified by the macro package automatically.} \label{fig1}
+\end{figure}
+
 
 
 \section{Using private letters as text corpus}
