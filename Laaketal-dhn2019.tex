@@ -95,7 +95,7 @@ KORP as corpus query system was chosen because of its open source value, search 
 Text fragments cited in KORP are limited to a sentence or a passage, so that KORP does not infringe copyrights. Metadata cited in the query results allow exact pinpointing of the source of the sentence, and there is a possibility to link the whole texts hosted elsewhere to the search metadata for close reading of the broader context when needed. 
 
 KORP helps to analyse research arguments, presented by Estonian literary scholars in the 1970s:
-% järgneb loend, palun vormistada!!
+% järgneb loend, palun vormistada!!+
 \begin{enumerate}
 \item The correspondence of Semper and Barbarus is subjective and emotional, the letters reveal the character and state of mind of the authors at the moment of writing them.
 
@@ -135,15 +135,15 @@ In this corpus, there are a lot of nonstandard abbreviations that were comprehen
 
 \subsection{Date and other temporal expressions}
 
-The date format of the manuscript letters varies greatly: ``11. jaanuar 1927'', ``19/XII.37'', ``2. 2. 1934'', ``J\~oulu 3. p\"uhal 1934'' (on the 3rd holiday of Christmas 1934). The date in the format chosen by the letter authors needs to be saved as a part of the text, but in addition to that, all the date formats need to be normalized so that they could be present in the letter metadata in a standardized format (i.e., YYYY-MM-DD) whenever possible. When it is not possible, we can use the category “undefined” for the analysis transparency. Temporal expressions in the text of letters can be automatically recognized with the help of EstNLTK library for Python (https://github.com/estnltk/estnltk) and a software tool developed by Siim Orasmaa \cite{ORASMAA14.530}. 
-% url tuleks viia joone alla
+The date format of the manuscript letters varies greatly: ``11. jaanuar 1927'', ``19/XII.37'', ``2. 2. 1934'', ``J\~oulu 3. p\"uhal 1934'' (on the 3rd holiday of Christmas 1934). The date in the format chosen by the letter authors needs to be saved as a part of the text, but in addition to that, all the date formats need to be normalized so that they could be present in the letter metadata in a standardized format (i.e., YYYY-MM-DD) whenever possible. When it is not possible, we can use the category ``undefined'' for the analysis transparency. Temporal expressions in the text of letters can be automatically recognized with the help of EstNLTK library for Python \cite{ORASMAA16.332} and a software tool developed by Siim Orasmaa \cite{ORASMAA14.530}. 
+% url tuleks viia joone alla + kirjanduseviide
 % mis vahe on temporal expressionil selles subsectionis ja NER TIMEX entity vahel järgmises subsectionis?
 
 \subsection{Named Entity Recognition}
 
 Special interest for the literary scholars lies in the proper names used in the letters: their usage combined with the metadata (time period, author) might lead to recognizing the important patterns and tendencies. 
 
-Named Entity Recognition (NER) annotations can be produced with the EstNLTK toolkit (https://github.com/estnltk/estnltk) and include the types of entities: person (PER), organisation (ORG), location (LOC) and timex (TIMEX). 
+Named Entity Recognition (NER) annotations can be produced with the EstNLTK toolkit and include the types of entities: person (PER), organisation (ORG), location (LOC) and timex (TIMEX). 
 % url tuleks viia joone alla
 
 \subsection{Detect other languages}
