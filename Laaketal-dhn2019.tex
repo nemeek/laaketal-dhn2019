@@ -93,14 +93,14 @@ KORP was chosen because of its open source value, search flexibility and easines
 
 The private letters of writers, the correspondence as whole was not meant for wider audience. Creators of the corpus met serious difficulties because often, both correspondents were very familiar with the subjects mentioned in the letters, so that sometimes they only hinted at the events or persons and used plenty of abbreviations known only to themselves. Which distinctive features of older correspondences need to be considered in preparing them to be used as corpus? Several steps are necessary to convert the digitised collection into a morphologically analysed language corpus, and to provide it with essential metadata about the sources.
 
-\begin{itemize}
+\begin{enumerate}
 \item The first step in digitising all kinds of texts, correspondences or published works, is the character recognition of the files or even the rewriting of the handwritten originals or typed text in the paper to the files; the latter is important in case of manuscripts. 
 
 \item In order to enable statistics and to find different linguistic phenomena in the texts, it is important to tokenise at least sentences and words, and to preserve meaningful units (chapters, articles, verses, letters). 
 
   \item The process of annotation was carried on semi-automatically. At first stage, sentence boundaries were determined, then words were tokenised. Tokenised words were lemmatised and tagged by part-of-speech and other grammatical features.
 
-\end{itemize}
+\end{enumerate}
 
 Different levels of annotation make it possible to search for different linguistic or other phenomena. In a tokenised text we can search by word forms (or their parts), but not by lemmas. In a lemmatised text we can search also by lemmas, but not by morphological characteristics (e.g., the case, the number). When the text has been morphologically analysed and disambiguated, we can search also by morphological characteristics and parts of speech. The automatic morphological analysis and automatic disambiguation that enable searching for different morphological forms of a word based on the lemma, seriously improve the usability and quality of the corpus. The accuracy of automatic morphological disambiguation in the Estonian standard language corpora reaches up to 93-98\% \cite{veskisliba}.  The accuracy for these texts is fare less.
 
@@ -115,7 +115,7 @@ In this corpus, there are a lot of nonstandard abbreviations that were comprehen
 
 \subsection{Date and other temporal expressions}
 
-The date format of the manuscript letters varies greatly: “11. jaanuar 1927”, “19/XII.37”, “2. 2. 1934”, “Jõulu 3. pühal 1934” (on the 3rd holiday of Christmas 1934). The date in the format chosen by the letter authors needs to be saved as a part of the text, but in addition to that, all the date formats need to be normalized so that they could be present in the letter metadata in a standardized format (i.e., YYYY-MM-DD) whenever possible. When it is not possible, we can use the category “undefined” for the analysis transparency. Temporal expressions in the text of letters can be automatically recognized with the help of EstNLTK library for Python (https://github.com/estnltk/estnltk) and a software tool developed by Siim Orasmaa \cite{ORASMAA14.530}. 
+The date format of the manuscript letters varies greatly: ``11. jaanuar 1927'', ``19/XII.37'', ``2. 2. 1934'', ``J\~oulu 3. p\"uhal 1934'' (on the 3rd holiday of Christmas 1934). The date in the format chosen by the letter authors needs to be saved as a part of the text, but in addition to that, all the date formats need to be normalized so that they could be present in the letter metadata in a standardized format (i.e., YYYY-MM-DD) whenever possible. When it is not possible, we can use the category “undefined” for the analysis transparency. Temporal expressions in the text of letters can be automatically recognized with the help of EstNLTK library for Python (https://github.com/estnltk/estnltk) and a software tool developed by Siim Orasmaa \cite{ORASMAA14.530}. 
 
 \subsection{Named Entity Recognition}
 
