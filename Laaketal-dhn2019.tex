@@ -133,19 +133,19 @@ In the following sections we are going to present the distinctive features of th
 
 \subsection{Abbreviations}
 
-In this corpus, there are a lot of nonstandard abbreviations that were comprehensible to the authors of the letters. The abbreviations pose a challenge to the morphological analysis and disambiguation of abbreviations itself, but also of the neighbouring words, the disambiguated analysis of which often relies on the context (for instance, “is. Linde” should be analyzed as “isand (i.e master) Linde” and not as a sentence ending and a starting of a new sentence although there is no common abbreviation “is.” in the standard Estonian). 
+In this corpus, there are a lot of nonstandard abbreviations that were comprehensible to the authors of the letters. The abbreviations pose a challenge to the morphological analysis and disambiguation of abbreviations itself, but also of the neighbouring words, the disambiguated analysis of which often relies on the context (for instance, ``is. Linde'' should be analyzed as ``isand (i.e master) Linde'' and not as a sentence ending and a starting of a new sentence although there is no common abbreviation ``is.'' in standard Estonian). 
 
 \subsection{Date and other temporal expressions}
 
 The date format of the manuscript letters varies greatly: ``11. jaanuar 1927'', ``19/XII.37'', ``2. 2. 1934'', ``J\~oulu 3. p\"uhal 1934'' (on the 3rd holiday of Christmas 1934). The date in the format chosen by the letter authors needs to be saved as a part of the text, but in addition to that, all the date formats need to be normalized so that they could be present in the letter metadata in a standardized format (i.e., YYYY-MM-DD) whenever possible. When it is not possible, we can use the category ``undefined'' for the analysis transparency. Temporal expressions in the text of letters can be automatically recognized with the help of EstNLTK library for Python \cite{ORASMAA16.332} and a software tool developed by Siim Orasmaa \cite{ORASMAA14.530}. 
 % url tuleks viia joone alla + kirjanduseviide
-% mis vahe on temporal expressionil selles subsectionis ja NER TIMEX entity vahel järgmises subsectionis?
+% mis vahe on temporal expressionil selles subsectionis ja NER TIMEX entity vahel järgmises subsectionis? - ei olegi, NER TIMEX  on eksitav.
 
 \subsection{Named Entity Recognition}
 
 Special interest for the literary scholars lies in the proper names used in the letters: their usage combined with the metadata (time period, author) might lead to recognizing the important patterns and tendencies. 
 
-Named Entity Recognition (NER) annotations can be produced with the EstNLTK toolkit and include the types of entities: person (PER), organisation (ORG), location (LOC) and timex (TIMEX). 
+Named Entity Recognition (NER) annotations can be produced with the EstNLTK toolkit and include the types of entities: person (PER), organisation (ORG), and location (LOC). % and timex (TIMEX). 
 % url tuleks viia joone alla + maha
 
 \subsection{Detect other languages}
@@ -155,7 +155,7 @@ Semper \& Barbarus were both promoters of French literature and culture in Eston
 
 \begin{figure}
   \centering
-  \begin{minipage}{0.8\textwidth}
+  \begin{minipage}{0.9\textwidth}
 \itshape
   ``\colorbox{Green}{Bifur}''i kiri saabus \colorbox{Magenta}{Sinu kirjaga \"uhel p\"aeval}. Palutakse \colorbox{Magenta}{kohe} luule \"ule artikkel \"ara saata ja kedagi paluda, kes teisi k\"usimusi
   (\colorbox{Orange}{sur la vie en g\'en\'eral})
@@ -163,7 +163,7 @@ k\"asitaks. Neil olla t\~olkija, nii siis v\~oivat eesti keeleski kirjutada. Et 
 
   \end{minipage}
   
-  \begin{minipage}{\textwidth}
+  \begin{minipage}{0.9\textwidth}
     \vspace{18pt}
     \subsubsection{Legend:}
     \begin{description}
@@ -174,14 +174,18 @@ k\"asitaks. Neil olla t\~olkija, nii siis v\~oivat eesti keeleski kirjutada. Et 
 \item[\colorbox{Orange}{orange}] --- other languages than Estonian
 \item[\colorbox{Magenta}{magenta}] --- temporal expression
 \end{description}
-    \end{minipage}
+\end{minipage}
+\begin{minipage}{0.9\textwidth}
+  \vspace{18pt}
+  ``The letter from Bifur arrived on the same day as yours. They asked to send immediately the article about poetry, and to find somebody who could treat other questions (sur la vie en g\'en\'eral). They are supposed to have a translator, thus it could be written in Estonian. Since I had already finished my article, I sent it to them today. If you think you’d like to send something, do it at once, --- maybe a translation of some short story (they pay 50 francs a page), and perhaps they can fit it into the fourth issue; or maybe you will even rush an article about prose and theatre. Address: Bifur , \'Editions du Carrefour , 199 , boul . St.-Germain , Paris (VIe) (M---eur le r\'edacteur en chef Ribemont Dessaignes). I asked them in my letter whether their translator can translate poems, in this case we could select something, or we can send them the anthology by Suits, which will come out soon. Bifur is more into prose and information-like reviews, so it’s unlikely that they can be cajoled into accepting poetry, but there are other magazines besides Bifur where we could publish, if only we found a translator. What is the E.W.U.’s [Estonian Writers’ Union] propaganda committee up to now? Should we by any chance start propagandising among their members? Visnapuu writes in the V.-Maa about Igor’s handiwork that it is necessary to propagandise, but if I’m not mistaken, wasn’t he on the committee himself?''
+  \end{minipage}
   \caption{Excerpt from letter (from Barbarus to Semper, Nov 8th 1929) with different annotation types}\label{fig1}
 \end{figure}
 
 Translation of text from Fig.~\ref{fig1}:
 % Teha nii, et tõlge ei satuks enne Fig. 1 ehk seda, mida ta tõlgib!
 % printversioonis on kaduma läind vähemalt 5 ülakoma, vt allpool
-``The letter from Bifur arrived on the same day as yours. They asked to send immediately the article about poetry, and to find somebody who could treat other questions (sur la vie en g\'en\'eral). They are supposed to have a translator, thus it could be written in Estonian. Since I had already finished my article, I sent it to them today. If you think you’d like to send something, do it at once, --- maybe a translation of some short story (they pay 50 francs a page), and perhaps they can fit it into the fourth issue; or maybe you will even rush an article about prose and theatre. Address: Bifur , \'Editions du Carrefour , 199 , boul . St.-Germain , Paris (VIe) (M---eur le r\'edacteur en chef Ribemont Dessaignes). I asked them in my letter whether their translator can translate poems, in this case we could select something, or we can send them the anthology by Suits, which will come out soon. Bifur is more into prose and information-like reviews, so it’s unlikely that they can be cajoled into accepting poetry, but there are other magazines besides Bifur where we could publish, if only we found a translator. What is the E.W.U.’s [Estonian Writers’ Union] propaganda committee up to now? Should we by any chance start propagandising among their members? Visnapuu writes in the V.-Maa about Igor’s handiwork that it is necessary to propagandise, but if I’m not mistaken, wasn’t he on the committee himself?''
+
 
 % Mis selle järgneva tabeli mõte on? Kui tekstis sellele viidet ei ole, tuleb välja võtta. Kui tahta sisse jätta, siis tuleb tekstis viidata.
 % Olga märkus: Kas table 1 oleks ehk parem esitada samuti DHN google-docsist võetud pildina - siis on näha, et näited on hüpertekstistatud ja tegemist ei ole üksnes statistikatabeliga? - ei
