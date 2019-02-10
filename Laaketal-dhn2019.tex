@@ -259,7 +259,7 @@ Query of KORP allows us to see the concordances of the Gide mentions, their abso
 
 From the statistics we see that it was mainly Semper who talked about Gide and the time interval is 1926 to 1930. It aligns well with the literary history: in 1928 Semper graduated as Master of Arts (\emph{magister artium}) from the University of Tartu (with a master’s diploma in literary studies, ``The structure of the literary style of Andr\'e Gide'') and continued his work at the university as an aesthetics and stylistics lecturer.
 
-\section{Current Workflow and Future Work}
+\section{Current workflow and future work}
 
 At present stage we have applied the standard procedures for converting text into KORP-compatible corpus to the Correspondence corpus as well with some minor additions.  The standard procedure is a pipeline consisting of tokeniser, sentence splitter, morphological analyser (including POS-tagger and lemmatiser) and morphological disambiguator.  Sentence splitter was modified according to non-standard abbreviations found from the Correspondence texts, but morphological analyser was used with standard options: guesser and forced proper-name finder.
 
@@ -274,7 +274,7 @@ We compared the number of proper names with manually disambiguated corpus, and f
 As it was mentioned before, both of the authors used foreign language in their letters as well.  Just now it is difficult to tell, how much, because the Estonian morphological analyser was too eager to find suitable analyses.  It would be possible to apply some language detecting tool before morphological analysis, but it is possible that foreign phrases are not so numerous and this strategy would generate too much noise.
 
 
-\section{For Conclusion}
+\section{For conclusion}
 
 The number of words and sentences in this corpus is rather big to annotate it entirely manually, but at least by some extent it would be necessary.  Without manually annotated data it would be difficult, if not impossible, to evaluate automatic annotation that is trained on nowadays texts.  We are going to annotate at least some parts of the texts manually to find better methods to improve automatic analysis.
 
