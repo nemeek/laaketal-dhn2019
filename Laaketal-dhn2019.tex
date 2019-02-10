@@ -57,29 +57,29 @@ The advantages and possibilities of corpus query system KORP that we have chosen
 
 The application of Natural Language Processing (NLP) and Text and Data Mining (TDM) methods and tools is gradually increasing and becoming more relevant in DH research in Estonia. Similarly to the Nordic and Baltic countries, Estonia can expect an explosive growth of digital heritage and text resources: preparations for massive digitisation of cultural heritage started in 2019 as national programme. The creation of these new digital resources will be the priority for all Estonian leading memory institutions and the scope of this huge project includes different types of cultural heritage (printed books, archival documents, photo and film heritage, ethnographic and fine art objects) \cite{digiteerimine,viireslaak18} Digitized resources will be made accessible on the internet as open data, but it is still an open question how and for what purpose can such digital resources be used \cite{laakviires}. 
 
-What are the new challenges and the new knowledge offered by using the applications of NLP tools in analysing the digital literary heritage? Our interdisciplinary project “Literary Studies Meet Corpus Linguistics” concentrates on using cultural heritage, especially literary history sources in research with the help of the NLP\&TDM methods. The primary question is how to bridge the gap between the research possibilities offered by the contemporary NLP\&TDM and the ever increasing amount of digitized texts and other digital data, produced by memory institutions. This has proved to be a complicated task and international practice has shown that literary scholars are slower to embrace new practices than linguists for whom corpus-based research is already a professional standard. In general, literary scholars are used to working with texts with traditional methods, analysing them as undivided poetical and semantic entities \cite{viireslaak18}. Digitizing of texts often preserves them as undivided and unannotated entities with occasionally added metadata - as a result, the digitized materials are human-readable rather than machine-readable.
+What are the new challenges and the new knowledge offered by using the applications of NLP tools in analysing the digital literary heritage? Our interdisciplinary project ``Literary Studies Meet Corpus Linguistics'' concentrates on using cultural heritage, especially literary history sources in research with the help of the NLP\&TDM methods. The primary question is how to bridge the gap between the research possibilities offered by the contemporary NLP\&TDM and the ever increasing amount of digitized texts and other digital data, produced by memory institutions. This has proved to be a complicated task and international practice has shown that literary scholars are slower to embrace new practices than linguists for whom corpus-based research is already a professional standard. In general, literary scholars are used to working with texts with traditional methods, analysing them as undivided poetical and semantic entities \cite{viireslaak18}. Digitizing of texts often preserves them as undivided and unannotated entities with occasionally added metadata - as a result, the digitized materials are human-readable rather than machine-readable.
 
 NLP\&TDM methods require treating literary works or texts as data, which can be analysed and processed with computer programmes. To research for statistics and trends in the data, a literary scholar needs either to do a close reading of literary texts as huge data amounts, or to develop new professional skills in data analysis methods. This imposes rethinking the approach to empirical object in literary studies in general and posing new and different research questions. The possibility to compare text strategies, rhetorical and stylistic patterns in literary, religious and political text corpora might give us new insights into intertwining ideology, rhetoric and identity presentations. One of the important trends of automated textual analysis in DH is Sentiment Analysis which, for instance, allows to measure emotion in parliamentary debates \cite{Rheault2016}.
 
 
 \section{Private letters as a literary source}
 
-The empirical base of our pilot project of private letters in KORP is based on the archival ego-documents. This is a rare collection of handwritten private letters: the correspondence between two Estonian writers Johannes Semper (1892-1970) and Johannes Barbarus (1890-1946). The authors were well-known avant-garde writers in Estonian literature, best friends and school classmates. They shared the same intellectual attitudes, views, and values. For example, they were Francophiles and during several decades they both mediated and translated French literature into Estonian. 
+The empirical base of our pilot project of private letters in KORP is based on the archival ego-documents. This is a rare collection of handwritten private letters: the correspondence between two Estonian writers Johannes Semper (1892--1970) and Johannes Barbarus (1890--1946). The authors were well-known avant-garde writers in Estonian literature, best friends and school classmates. They shared the same intellectual attitudes, views, and values. For example, they were Francophiles and during several decades they both mediated and translated French literature into Estonian. 
 
-During the years covered by the correspondence, in 1911-1939, Barbarus published the total of 17 collections of poetry, and Semper published four collections of poetry and four books of short stories and novels. The letters were written mainly in different places in Estonia, and also during travels: they both travelled extensively in Europe (and other parts of the world) and in their letters they described to each other the sights they saw as well as the literary events at home. They also wrote about their work, everyday life, health and prescriptions, hobbies (hunting, swimming, skating, etc.), and guests. 
+During the years covered by the correspondence, in 1911--1939, Barbarus published the total of 17 collections of poetry, and Semper published four collections of poetry and four books of short stories and novels. The letters were written mainly at different locations in Estonia, and also during travels: they both travelled extensively in Europe (and other parts of the world) and in their letters they described to each other the sights they saw as well as the literary events at home. They also wrote about their work, everyday life, health and prescriptions, hobbies (hunting, swimming, skating, etc.), and guests. 
 
-The temporal and contextual frames of this correspondence is the period in Europe between two World Wars and, according to French philosopher Pierre Bourdieu, the creation of  the Estonian ‘cultural field’ in the Estonian Republic in years 1918-1940. As such, the correspondence offers semantically rich and multidimensional content for literary scholars.  
+The temporal and contextual frames of this correspondence is the period in Europe between two World Wars and, according to French philosopher Pierre Bourdieu, the creation of  the Estonian ‘cultural field’ in the Estonian Republic in years 1918--1940. As such, the correspondence offers semantically rich and multidimensional content for literary scholars.  
 
 Generally, we are inspired by the question how this kind of sources (private letters, correspondences, manuscripts, etc.) in different kinds of machine-readable formats (pdf, docx, txt etc.) can be used for creating new knowledge in the interdisciplinary field of literary studies, including biographics and life writing studies \cite{2015}. 
 
 The private correspondence of two Estonian writers during 28 years as an empirical material is extremely rich in the themes and possibilities to pose the traditional as well as the new research questions, e.g the factors of subjectivity and emotionality, verbal and poetic creativeness of the both authors.  
 
-The original letters are held at different archives: the letters of Barbarus to Semper belong to the Estonian Cultural History Archives of the Estonian Literary Museum and the letters of Semper to Barbarus belong to the Estonian National Archives due to the unique literary and historical value of this correspondence. Their correspondence consists of 670 letters with, all in all, more than 1,100 pages and more than 310 890 tokens (249 970 words). 
+The original letters are held at different archives: the letters of Barbarus to Semper belong to the Estonian Cultural History Archives of the Estonian Literary Museum and the letters of Semper to Barbarus belong to the Estonian National Archives due to the unique literary and historical value of this correspondence. Their correspondence consists of 670 letters with, all in all, more than 1,100 pages and more than 310 000 tokens or about 250 000 words.  The number of tokens and words is approximate, as we will discuss later. 
 
 
 \section{KORP as a tool for corpus linguistics}
 
-KORP is a corpus query analysis system that allows to find concordances and build various statistics from differently annotated corpora using text metadata (author, year of publishing, text type etc) and linguistic annotation (splitting into sentences and words, punctuation, morphology, syntax and semantics). Technically, KORP is a frontend tool that uses much of IMS Open Corpus Workbench as backend. It was created and maintained at Swedish Language Bank Spr{\aa}kbanken \cite{BORIN12.248} and is being developed and customised by language technology networks in several countries: Sweden\footnote{ https://spraakbanken.gu.se/korp/}
+KORP is a corpus query analysis system that allows to find concordances and build various statistics from differently annotated corpora using text metadata (author, year of publishing, text type etc) and linguistic annotation (splitting into sentences and words, punctuation, morphology, syntax and semantics). Technically, KORP is a frontend tool that uses much of IMS Open Corpus Workbench \cite{Hardie:2012:1384-6655:380} as backend. It was created and maintained at Swedish Language Bank Spr{\aa}kbanken \cite{BORIN12.248} and is being developed and customised by language technology networks in several countries: Sweden\footnote{ https://spraakbanken.gu.se/korp/}
 , Finland\footnote{http://korp.csc.fi}, Norway\footnote{http://gtweb.uit.no/korp/}, Estonia\footnote{http://korp.keeleressursid.ee}, Denmark\footnote{http://alf.hum.ku.dk/korp/} and Island\footnote{http://malheildir.arnastofnun.is/}. 
 % Puudu on kõik joonealused urlid nende KORPide kohta!! palun pandagu tagasi! +
 % vt Sprakbankeni nullikesega a on valesti vormistatud ja pole print-versioonis näha!! +
@@ -87,7 +87,7 @@ KORP is a corpus query analysis system that allows to find concordances and buil
 Estonian KORP is hosted by the Centre of Estonian Language Resources\footnote{https://www.keeleressursid.ee}. The Estonian data available in KORP currently consists of more than 850 million tokens. As Estonian is a highly inflective language with a rich morphology and free word order, almost all texts are automatically annotated and disambiguated on the morphological level to enable form- and baseform-based search.
 
 
-As a pilot project for the needs of literary studies in addition to the corpora designed for linguistic research, we have created Correspondence Corpus of private letters (Semper and Barbarus, 1911-1940). The original handwritten manuscripts where already transformed to typewritten and then to electronic format; they had to be further transformed to a machine-readable text files by manually adding metadata and automatically analyzing and disambiguating morphological categories. 
+As a pilot project for the needs of literary studies in addition to the corpora designed for linguistic research, we have created Correspondence Corpus of private letters (Semper and Barbarus, 1911--1940). The original handwritten manuscripts where already typed in. They were to transform to machine-readable text files by manually adding metadata and automatically analyzing and disambiguating morphological categories. 
 
 KORP as corpus query system was chosen because of its open source value, search flexibility and easiness, graphical overview of search results in subcorpora, easy switching between concordances and broader context (as well as between frequency statistics and concordances), broad possibilities to group absolute frequencies of tokens or occurrences and automatically calculated relative frequencies (occurrences per million tokens).  The search results and statistics from the KORP are exportable to Comma Separated Values (CSV) and JSon format. 
 % VÄLJA: we plan to extend the export to the Excel (XLS) and HTML formats (already used in Finnish KORP),  integrate a single sign-on access for corpora with restricted usage, introduce links to audio and video data, links to lexicons and automatic annotation of corpora, the features already implemented in KORP of the other countries (Finland, Sweden, Norway). +
@@ -117,7 +117,7 @@ Which distinctive features of older correspondences need to be considered in pre
 
 \end{enumerate}
 
-Different levels of annotation make it possible to search for different linguistic or other phenomena. In a tokenised text we can search by word forms (or their parts), but not by lemmas. In a lemmatised text we can search also by lemmas, but not by morphological characteristics (e.g., the case, the number). When the text has been morphologically analysed and disambiguated, we can search also by morphological characteristics and parts of speech. The automatic morphological analysis and automatic disambiguation that enable searching for different morphological forms of a word based on the lemma, seriously improve the usability and quality of the corpus. The accuracy of automatic morphological disambiguation in the Estonian standard language corpora reaches up to 93-98\% \cite{veskisliba}.  The accuracy for these texts is fare less.
+Different levels of annotation make it possible to search for different linguistic or other phenomena. In a tokenised text we can search by word forms (or their parts), but not by lemmas. In a lemmatised text we can search also by lemmas, but not by morphological characteristics (e.g., the case, the number). When the text has been morphologically analysed and disambiguated, we can search also by morphological characteristics and parts of speech. The automatic morphological analysis and automatic disambiguation that enable searching for different morphological forms of a word based on the lemma, seriously improve the usability and quality of the corpus. The accuracy of automatic morphological disambiguation in the Estonian standard language corpora reaches up to 93--98\% \cite{veskisliba}.  The accuracy for these texts is propably much lower.
 
 
 % VÄLJA: The additional clause tokenisation helps to find the linguistic phenomena occurring in the clauses (e.g. the phrasal verbs and idiomatic expressions). The yield and accuracy of automated tokenisation of clauses in the Estonian standard language corpora is, respectively, 95\% and 96\% \cite{Kaalep2012}. 
@@ -127,7 +127,9 @@ Meaningful units, e.g., temporal expressions or named entities, found in the tex
 
 The private letters of writers, the correspondence as whole was not meant for wider audience. Creators of the corpus met serious difficulties because often, both correspondents were very familiar with the subjects mentioned in the letters, so that sometimes they only hinted at the events or persons and used plenty of abbreviations known only to themselves. Authors of letters reflect both the historical period and the personal context and idiolects. Being avant-garde poets, Semper \& Barbarus both experimented with the language a lot. 
 % TÕLKIDA:
-% Järgnevalt anname ülevaate iseloomulikest joontest, mis väärivad eraldi annoteerimist uuritavas materjalis. Kõiki annotatsioonitüüpe koos on illustreerivalt kujutatud Fig. 1
+% Järgnevalt anname ülevaate iseloomulikest joontest, mis väärivad eraldi annoteerimist uuritavas materjalis. Kõiki annotatsioonitüüpe koos on illustreerivalt kujutatud Fig. 1 +
+
+In the following sections we are going to present the distinctive features of the texts that would be of great interest for both linguists and literary scholars.  See Fig.~\ref{fig1} for a passage from a letter by Barbarus to Semper with annotations and English translation.
 
 \subsection{Abbreviations}
 
@@ -144,7 +146,7 @@ The date format of the manuscript letters varies greatly: ``11. jaanuar 1927'', 
 Special interest for the literary scholars lies in the proper names used in the letters: their usage combined with the metadata (time period, author) might lead to recognizing the important patterns and tendencies. 
 
 Named Entity Recognition (NER) annotations can be produced with the EstNLTK toolkit and include the types of entities: person (PER), organisation (ORG), location (LOC) and timex (TIMEX). 
-% url tuleks viia joone alla
+% url tuleks viia joone alla + maha
 
 \subsection{Detect other languages}
 
@@ -182,7 +184,7 @@ Translation of text from Fig.~\ref{fig1}:
 ``The letter from Bifur arrived on the same day as yours. They asked to send immediately the article about poetry, and to find somebody who could treat other questions (sur la vie en g\'en\'eral). They are supposed to have a translator, thus it could be written in Estonian. Since I had already finished my article, I sent it to them today. If you think you’d like to send something, do it at once, --- maybe a translation of some short story (they pay 50 francs a page), and perhaps they can fit it into the fourth issue; or maybe you will even rush an article about prose and theatre. Address: Bifur , \'Editions du Carrefour , 199 , boul . St.-Germain , Paris (VIe) (M---eur le r\'edacteur en chef Ribemont Dessaignes). I asked them in my letter whether their translator can translate poems, in this case we could select something, or we can send them the anthology by Suits, which will come out soon. Bifur is more into prose and information-like reviews, so it’s unlikely that they can be cajoled into accepting poetry, but there are other magazines besides Bifur where we could publish, if only we found a translator. What is the E.W.U.’s [Estonian Writers’ Union] propaganda committee up to now? Should we by any chance start propagandising among their members? Visnapuu writes in the V.-Maa about Igor’s handiwork that it is necessary to propagandise, but if I’m not mistaken, wasn’t he on the committee himself?''
 
 % Mis selle järgneva tabeli mõte on? Kui tekstis sellele viidet ei ole, tuleb välja võtta. Kui tahta sisse jätta, siis tuleb tekstis viidata.
-% Olga märkus: Kas table 1 oleks ehk parem esitada samuti DHN google-docsist võetud pildina - siis on näha, et näited on hüpertekstistatud ja tegemist ei ole üksnes statistikatabeliga? 
+% Olga märkus: Kas table 1 oleks ehk parem esitada samuti DHN google-docsist võetud pildina - siis on näha, et näited on hüpertekstistatud ja tegemist ei ole üksnes statistikatabeliga? - ei
 \begin{table}
   \caption{Text attributes and their values for example presented at Fig.~\ref{fig1}}
   \label{tabattrs}
@@ -203,9 +205,6 @@ notes & [empty]\\
 \hline
 \end{tabular}
 \end{table}
-
-
-
 
 
 \section{Using private letters as text corpus}
@@ -256,9 +255,10 @@ Query of KORP allows us to see the concordances of the Gide mentions, their abso
 \end{table}
 
 
-From the statistics we see that it was mainly Semper who talked about Gide and the time interval is 1926 to 1930. It aligns well with the literary history: in 1928 Semper graduated as Master of Arts from the University of Tartu (with a master’s diploma in literary studies, “The structure of the literary style of Andr\'e Gide”) and continued his work at the university as an aesthetics and stylistics lecturer. 
+From the statistics we see that it was mainly Semper who talked about Gide and the time interval is 1926 to 1930. It aligns well with the literary history: in 1928 Semper graduated as Master of Arts from the University of Tartu (with a master’s diploma in literary studies, ``The structure of the literary style of Andr\'e Gide'') and continued his work at the university as an aesthetics and stylistics lecturer.
 
-\section{Future work / Perspectives}
+
+\section{Future work and Perspectives}
 
 Such archival materials as a private correspondences of writers have a great cultural value, but promise an incredible linguistic importance as well. The elaborated search possibilities of KORP may be used to verify objectively, via linguistic analysis, the conclusions which have so far been drawn by using traditional methods of literary research, mainly using the well known method of slow close reading of the texts. 
 
