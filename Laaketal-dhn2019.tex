@@ -261,6 +261,12 @@ Query of KORP allows us to see the concordances of the Gide mentions, their abso
 
 From the statistics we see that it was mainly Semper who talked about Gide and the time interval is 1926 to 1930. It aligns well with the literary history: in 1928 Semper graduated as Master of Arts from the University of Tartu (with a master’s diploma in literary studies, ``The structure of the literary style of Andr\'e Gide'') and continued his work at the university as an aesthetics and stylistics lecturer.
 
+\section{Current workflow}
+
+At present stage we have applied the standard procedures for converting text into KORP-compatilble corpus to the Correspondence corpus as well with some minor additions.  The standard procedure is a pipeline consisting of tokeniser, sentence splitter, morphological analyser (including POS-tagger and lemmatiser) and morphological disambiguator.  Sentence splitter was modified according to non-standard abbreviations found from the Correspondence texts, but morphological analyser was used with standard options: guesser and forced proper-name finder.  Guesser makes the analyser find answers for words not in analyser's lexicon, and proper-name finder gives precedence to proper names, if analysis is ambigus and word starts with a capital letter.  The corpus is not properly evaluated, but quick overview revealed at least two problems in POS tagging and lemmatisation.  First, the POS tagging seem to be too optimistic about proper names, and second, foreign words and phrases are analysed as Estonian.
+
+We compared the number of proper names with manually disambiguated corpus, and found the general number to be rather normal.  Although being far more than in fiction,  it fell between relative frequency of proper nouns in informational texts and journal texts (newspapers).  The over-estimation of proper nouns showed up at the introductory parts of the letters, where capitalised word ``Armas'' stands before name of the recipient.  The English equivalent would be ``Dear'' at the very beginning of letter.  Well, ``Armas'' is a first name used in Estonia, but it is a extremely rare one, and it was really never used as such in this correspondence.
+
 
 \section{Future work and Perspectives}
 
