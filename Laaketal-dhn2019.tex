@@ -87,7 +87,7 @@ KORP is a corpus query analysis system that allows to find concordances and buil
 Estonian KORP is hosted by the Centre of Estonian Language Resources\footnote{https://www.keeleressursid.ee}. The Estonian data available in KORP currently consists of more than 850 million tokens. As Estonian is a highly inflective language with a rich morphology and free word order, almost all texts are automatically annotated and disambiguated on the morphological level to enable form- and baseform-based search.
 
 
-As a pilot project for the needs of literary studies in addition to the corpora designed for linguistic research, we have created Correspondence Corpus of private letters (Semper and Barbarus, 1911--1940). The original handwritten manuscripts where already typed in. They were to transform to machine-readable text files by manually adding metadata and automatically analyzing and disambiguating morphological categories. 
+As a pilot project for the needs of literary studies in addition to the corpora designed for linguistic research, we have created Correspondence Corpus of private letters (Semper and Barbarus, 1911--1940). The original handwritten manuscripts where already typed in. They were to transform to machine-readable text files by manually adding metadata and automatically analysing and disambiguating morphological categories. 
 
 KORP as a corpus query system was chosen because of its open source value, search flexibility and easiness, graphical overview of search results in subcorpora, easy switching between concordances and broader context (as well as between frequency statistics and concordances), broad possibilities to group absolute frequencies of tokens or occurrences and automatically calculated relative frequencies (occurrences per million tokens).  Search results and statistics from KORP are exportable into Comma Separated Values (CSV) and JSon format. 
 % VÄLJA: we plan to extend the export to the Excel (XLS) and HTML formats (already used in Finnish KORP),  integrate a single sign-on access for corpora with restricted usage, introduce links to audio and video data, links to lexicons and automatic annotation of corpora, the features already implemented in KORP of the other countries (Finland, Sweden, Norway). +
@@ -117,7 +117,7 @@ Which distinctive features of older correspondences need to be considered in pre
 
 \end{enumerate}
 
-Different levels of annotation make it possible to search for different linguistic or other phenomena. In a tokenised text we can search by word forms (or their parts), but not by lemmas. In a lemmatised text we can search also by lemmas, but not by morphological characteristics (e.g., the case, the number). When the text has been morphologically analysed and disambiguated, we can search also by morphological characteristics and parts of speech. The automatic morphological analysis and automatic disambiguation that enable searching for different morphological forms of a word based on the lemma, seriously improve the usability and quality of the corpus. The accuracy of automatic morphological disambiguation in the Estonian standard language corpora reaches up to 93--98\% \cite{veskisliba}.  The accuracy for these texts is propably much lower.
+Different levels of annotation make it possible to search for different linguistic or other phenomena. In a tokenised text we can search by word forms (or their parts), but not by lemmas. In a lemmatised text we can search also by lemmas, but not by morphological characteristics (e.g., the case, the number). When the text has been morphologically analysed and disambiguated, we can search also by morphological characteristics and parts of speech. The automatic morphological analysis and automatic disambiguation that enable searching for different morphological forms of a word based on the lemma, seriously improve the usability and quality of the corpus. The accuracy of automatic morphological disambiguation in the Estonian standard language corpora reaches up to 93--98\% \cite{veskisliba}.  The accuracy for these texts is probably much lower.
 
 
 % VÄLJA: The additional clause tokenisation helps to find the linguistic phenomena occurring in the clauses (e.g. the phrasal verbs and idiomatic expressions). The yield and accuracy of automated tokenisation of clauses in the Estonian standard language corpora is, respectively, 95\% and 96\% \cite{Kaalep2012}. 
@@ -133,24 +133,24 @@ In the following sections we are going to present the distinctive features of th
 
 \subsection{Abbreviations}
 
-In this corpus, there are a lot of nonstandard abbreviations that were comprehensible to the authors of the letters. The abbreviations pose a challenge to the morphological analysis and disambiguation of abbreviations itself, but also of the neighbouring words, the disambiguated analysis of which often relies on the context (for instance, ``is. Linde'' should be analyzed as ``isand (i.e master) Linde'' and not as a sentence ending and a starting of a new sentence although there is no common abbreviation ``is.'' in standard Estonian). 
+In this corpus, there are a lot of nonstandard abbreviations that were comprehensible to the authors of the letters. The abbreviations pose a challenge to the morphological analysis and disambiguation of abbreviations itself, but also of the neighbouring words, the disambiguated analysis of which often relies on the context (for instance, ``is. Linde'' should be analysed as ``isand (i.e master) Linde'' and not as a sentence ending and a starting of a new sentence although there is no common abbreviation ``is.'' in standard Estonian). 
 
 \subsection{Date and other temporal expressions}
 
-The date format of the manuscript letters varies greatly: ``11. jaanuar 1927'', ``19/XII.37'', ``2. 2. 1934'', ``J\~oulu 3. p\"uhal 1934'' (on the 3rd day of Christmas 1934). The date in the format chosen by the letter authors needs to be saved as a part of the text, but in addition to that, all the date formats need to be normalized so that they could be present in the letter metadata in a standardized format (i.e., YYYY-MM-DD) whenever possible. When it is not possible, we can use the category ``undefined'' for the analysis transparency. Temporal expressions in the text of letters can be automatically recognized with the help of EstNLTK library for Python \cite{ORASMAA16.332} and a software tool developed by Siim Orasmaa \cite{ORASMAA14.530}. 
+The date format of the manuscript letters varies greatly: ``11. jaanuar 1927'', ``19/XII.37'', ``2. 2. 1934'', ``J\~oulu 3. p\"uhal 1934'' (on the 3rd day of Christmas 1934). The date in the format chosen by the letter authors needs to be saved as a part of the text, but in addition to that, all the date formats need to be normalised so that they could be present in the letter metadata in a standardised format (i.e., YYYY-MM-DD) whenever possible. When it is not possible, we can use the category ``undefined'' for the analysis transparency. Temporal expressions in the text of letters can be automatically recognised with the help of EstNLTK library for Python \cite{ORASMAA16.332} and a software tool developed by Siim Orasmaa \cite{ORASMAA14.530}. 
 % url tuleks viia joone alla + kirjanduseviide
 % mis vahe on temporal expressionil selles subsectionis ja NER TIMEX entity vahel järgmises subsectionis? - ei olegi, NER TIMEX  on eksitav.
 
 \subsection{Named Entity Recognition}
 
-Special interest for the literary scholars lies in the proper names used in the letters: their usage combined with the metadata (time period, author) might lead to recognizing the important patterns and tendencies. 
+Special interest for the literary scholars lies in the proper names used in the letters: their usage combined with the metadata (time period, author) might lead to recognising the important patterns and tendencies. 
 
 Named Entity Recognition (NER) annotations can be produced with the EstNLTK toolkit and include the types of entities: person (PER), organisation (ORG), and location (LOC). % and timex (TIMEX). 
 % url tuleks viia joone alla + maha
 
 \subsection{Detect other languages}
 
-Semper \& Barbarus were both promoters of French literature and culture in Estonia. They both worked as translators and travelled a lot. They scattered their letters with words, phrases, sentences and longer citations in many other languages than Estonian that were familiar to them (Latin, French, Russian, German). This is a challenge for the automatic language recognition and annotation tools which are currently oriented only to the analysis of standard Estonian. These tools do not help much in case of excerpts from other languages, but if such code-switching pieces were precisely recognized, lemmatized and analyzed, that information would be useful both to linguists and literary scholars.
+Semper \& Barbarus were both promoters of French literature and culture in Estonia. They both worked as translators and travelled a lot. They scattered their letters with words, phrases, sentences and longer citations in many other languages than Estonian that were familiar to them (Latin, French, Russian, German). This is a challenge for the automatic language recognition and annotation tools which are currently oriented only to the analysis of standard Estonian. These tools do not help much in case of excerpts from other languages, but if such code-switching pieces were precisely recognised, lemmatised and analysed, that information would be useful both to linguists and literary scholars.
 
 
 \begin{figure}
@@ -236,7 +236,7 @@ Query of KORP allows us to see the concordances of the Gide mentions, their abso
 \caption{Statistics of mentioning Gide in KORP, organised by word form, sender and date.}\label{tab1}
 \begin{tabular}{| l | l | l | r|}
   \hline
-  word & sender & date & occurrences (absolute freq) \\
+  word & sender & date & occurrences (absolute frequency) \\
   \hline
   Gide'i & Semper & -- & 6.4 (2)\\
   Gide'i & Semper & 1926-12-13 & 3.2 (1)\\
@@ -259,11 +259,11 @@ Query of KORP allows us to see the concordances of the Gide mentions, their abso
 \end{table}
 
 
-From the statistics we see that it was mainly Semper who talked about Gide and the time interval is 1926 to 1930. It aligns well with the literary history: in 1928 Semper graduated as Master of Arts (magister artium) from the University of Tartu (with a master’s diploma in literary studies, ``The structure of the literary style of Andr\'e Gide'') and continued his work at the university as an aesthetics and stylistics lecturer.
+From the statistics we see that it was mainly Semper who talked about Gide and the time interval is 1926 to 1930. It aligns well with the literary history: in 1928 Semper graduated as Master of Arts (\emph{magister artium}) from the University of Tartu (with a master’s diploma in literary studies, ``The structure of the literary style of Andr\'e Gide'') and continued his work at the university as an aesthetics and stylistics lecturer.
 
-\section{Current workflow}
+\section{Current Workflow and Future Work}
 
-At present stage we have applied the standard procedures for converting text into KORP-compatiblle corpus to the Correspondence corpus as well with some minor additions.  The standard procedure is a pipeline consisting of tokeniser, sentence splitter, morphological analyser (including POS-tagger and lemmatiser) and morphological disambiguator.  Sentence splitter was modified according to non-standard abbreviations found from the Correspondence texts, but morphological analyser was used with standard options: guesser and forced proper-name finder.
+At present stage we have applied the standard procedures for converting text into KORP-compatible corpus to the Correspondence corpus as well with some minor additions.  The standard procedure is a pipeline consisting of tokeniser, sentence splitter, morphological analyser (including POS-tagger and lemmatiser) and morphological disambiguator.  Sentence splitter was modified according to non-standard abbreviations found from the Correspondence texts, but morphological analyser was used with standard options: guesser and forced proper-name finder.
 
 Sentence splitter and tokeniser are tools that determine the quality of the corpus.
 They can be adjusted by properties of corpus and annotation aims, e.g. we can annotate a date as one token, or as a series of several tokens.  This would give different results of number of tokens and number of sentences.
@@ -271,14 +271,14 @@ They can be adjusted by properties of corpus and annotation aims, e.g. we can an
 
 Guesser makes the analyser find answers for words not in analyser's lexicon, and proper-name finder gives precedence to proper names, if analysis is ambiguous and word starts with a capital letter.  The corpus is not properly evaluated, but quick overview revealed at least two problems in POS tagging and lemmatisation.  First, the POS tagging seem to be too optimistic about proper names, and second, foreign words and phrases are analysed as Estonian.
 
-We compared the number of proper names with manually disambiguated corpus, and found the general number to be rather normal.  Although being far more than in fiction, it fell between relative frequency of proper nouns in informational texts and journal texts (newspapers).  The over-estimation of proper nouns showed up at the introductory parts of the letters, where capitalised word ``Armas'' stands before name of the recipient.  The English equivalent would be ``Dear'' at the very beginning of letter.  Well, ``Armas'' is a first name used in Estonia, but it is a extremely rare one, and it was really never used as such in this correspondence.  We adjusted the workflow accordingly by switching off forced proper-name finder, and with some decline of the number of proper nouns, got rid of analysis of ``Armas'' as name.  How much did it affect the recall of proper names, needs some futher examination.
+We compared the number of proper names with manually disambiguated corpus, and found the general number to be rather normal.  Although being far more than in fiction, it fell between relative frequency of proper nouns in informational texts and journal texts (newspapers).  The over-estimation of proper nouns showed up at the introductory parts of the letters, where capitalised word ``Armas'' stands before name of the recipient.  The English equivalent would be ``Dear'' at the very beginning of letter.  Well, ``Armas'' is a first name used in Estonia, but it is a extremely rare one, and it was really never used as such in this correspondence.  We adjusted the workflow accordingly by switching off forced proper-name finder, and with some decline of the number of proper nouns, got rid of analysis of ``Armas'' as name.  How much did it affect the recall of proper names, needs some further examination.
 
 As it was mentioned before, both of the authors used foreign language in their letters as well.  Just now it is difficult to tell, how much, because the Estonian morphological analyser was too eager to find suitable analyses.  It would be possible to apply some language detecting tool before morphological analysis, but it is possible that foreign phrases are not so numerous and this strategy would generate too much noise.
 
 
-\section{Future work and Perspectives}
+\section{For Conclusion}
 
-The number of words and sentences in this corpus is rather big to tag it entirely manually, but at least by some extent it would be necessary.  Without manually annotated data it would be difficult, if not impossible, to evaluate automatic annotation that is trained on nowadays texts.  We are going to annotate at least some parts of the texts manually to find better methods to improve automatic analysis.
+The number of words and sentences in this corpus is rather big to annotate it entirely manually, but at least by some extent it would be necessary.  Without manually annotated data it would be difficult, if not impossible, to evaluate automatic annotation that is trained on nowadays texts.  We are going to annotate at least some parts of the texts manually to find better methods to improve automatic analysis.
 
 
 Such archival materials as a private correspondences of writers have a great cultural value, but promise an incredible linguistic importance as well. The elaborated search possibilities of KORP may be used to verify objectively, via linguistic analysis, the conclusions which have so far been drawn by using traditional methods of literary research, mainly using the well known method of slow close reading of the texts. 
