@@ -182,7 +182,7 @@ k\"asitaks. Neil olla t\~olkija, nii siis v\~oivat eesti keeleski kirjutada. Et 
   \caption{Excerpt from letter (from Barbarus to Semper, Nov 8th 1929) with different annotation types}\label{fig1}
 \end{figure}
 
-Translation of text from Fig.~\ref{fig1}:
+%Translation of text from Fig.~\ref{fig1}:
 % Teha nii, et tõlge ei satuks enne Fig. 1 ehk seda, mida ta tõlgib!
 % printversioonis on kaduma läind vähemalt 5 ülakoma, vt allpool
 
@@ -263,7 +263,13 @@ From the statistics we see that it was mainly Semper who talked about Gide and t
 
 \section{Current workflow}
 
-At present stage we have applied the standard procedures for converting text into KORP-compatilble corpus to the Correspondence corpus as well with some minor additions.  The standard procedure is a pipeline consisting of tokeniser, sentence splitter, morphological analyser (including POS-tagger and lemmatiser) and morphological disambiguator.  Sentence splitter was modified according to non-standard abbreviations found from the Correspondence texts, but morphological analyser was used with standard options: guesser and forced proper-name finder.  Guesser makes the analyser find answers for words not in analyser's lexicon, and proper-name finder gives precedence to proper names, if analysis is ambigus and word starts with a capital letter.  The corpus is not properly evaluated, but quick overview revealed at least two problems in POS tagging and lemmatisation.  First, the POS tagging seem to be too optimistic about proper names, and second, foreign words and phrases are analysed as Estonian.
+At present stage we have applied the standard procedures for converting text into KORP-compatilble corpus to the Correspondence corpus as well with some minor additions.  The standard procedure is a pipeline consisting of tokeniser, sentence splitter, morphological analyser (including POS-tagger and lemmatiser) and morphological disambiguator.  Sentence splitter was modified according to non-standard abbreviations found from the Correspondence texts, but morphological analyser was used with standard options: guesser and forced proper-name finder.
+
+Sentence splitte and tokeniser are tools that determine the quality of the corpus.
+They can be adjusted by properties of corpus and annotation aims, e.g. we can annotate a date as one token, or as a series of several tokens.  This would give different results of number of tokens and number of sentences.
+
+
+Guesser makes the analyser find answers for words not in analyser's lexicon, and proper-name finder gives precedence to proper names, if analysis is ambigus and word starts with a capital letter.  The corpus is not properly evaluated, but quick overview revealed at least two problems in POS tagging and lemmatisation.  First, the POS tagging seem to be too optimistic about proper names, and second, foreign words and phrases are analysed as Estonian.
 
 We compared the number of proper names with manually disambiguated corpus, and found the general number to be rather normal.  Although being far more than in fiction,  it fell between relative frequency of proper nouns in informational texts and journal texts (newspapers).  The over-estimation of proper nouns showed up at the introductory parts of the letters, where capitalised word ``Armas'' stands before name of the recipient.  The English equivalent would be ``Dear'' at the very beginning of letter.  Well, ``Armas'' is a first name used in Estonia, but it is a extremely rare one, and it was really never used as such in this correspondence.  We adjusted the workflow accordingly by switching off forced proper-name finder, and with some decline of the number of proper nouns, got rid of analysis of ``Armas'' as name.  How much did it affect the recall of proper names, needs some futher examination.
 
@@ -271,6 +277,9 @@ As it was mentioned before, both of the authors used foreign language in their l
 
 
 \section{Future work and Perspectives}
+
+The number of words and sentences in this corpus is rather big to tag it entirely manually, but at least by some extent it would be necessary.  Without manually annotated data it would be difficult, if not impossible, to evaluate automatic annotation that is trained on nowadays texts.  We are going to annotate at least some parts of the texts manually to find better methods to improve automatic analysis.
+
 
 Such archival materials as a private correspondences of writers have a great cultural value, but promise an incredible linguistic importance as well. The elaborated search possibilities of KORP may be used to verify objectively, via linguistic analysis, the conclusions which have so far been drawn by using traditional methods of literary research, mainly using the well known method of slow close reading of the texts. 
 
